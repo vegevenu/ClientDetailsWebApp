@@ -1,0 +1,35 @@
+﻿@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<form method="post" style="margin: 5% 0 0">
+    <h3>Fill in the following form</h3>
+        <table cellspacing="10" cellpadding="10">
+            <tr>
+                <td>Client ID</td>
+                <td> <input type="text" style="margin: 1px 0 2px" name="id" /></td> 
+            </tr>
+            <tr>
+                <td>Name </td>
+                <td> <input type="text" style="margin: 1px 0 2px" name="name" /> </td>   
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td><input type="text" style="margin: 1px 0 2px" name="address" /></td>
+            </tr>
+            <tr>
+                <td>Trusted</td>
+                <td> <input type="checkbox" style="margin: 1px 0 2px" name="trusted" /></td>
+            </tr>
+    </table>
+    <input type="submit" value="Save" />
+</form>
+
+<p>
+    @if (ViewBag.Submitted)
+    {
+        // If the form was submitted
+        @ViewBag.Message
+    }
+</p>
+
